@@ -1,5 +1,8 @@
 <?php
 use App\Author;
+use App\Blog;
+use App\Product;
+use App\Category;
 use App\Http\Resources\AuthorResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +21,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/authors', function()
 {
     return AuthorResource::collection(Author::get());
+});
+
+
+Route::get('/blogs', function()
+{
+    return BlogResource::collection(Blog::get());
+});
+
+
+Route::get('/products', function()
+{
+    return ProductResource::collection(Product::get());
+});
+
+Route::get('/categories', function()
+{
+    return CategoryResource::collection(Category::get());
 });
 
 Route::get('/oneofauthors', function()

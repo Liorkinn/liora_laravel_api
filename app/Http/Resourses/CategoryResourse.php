@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Resources;
-use App\Author;
+use App\Category;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AuthorResource extends JsonResource
+class CategoryResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,10 +17,7 @@ class AuthorResource extends JsonResource
        
         return 
         [
-            'name' => $this->name,
-            'age' =>$this->age,
-            'experience' => $this->experience,
-            'blogs' => $this->blogs,
+         'title' =>$this->title,
         ];
     }
 }
